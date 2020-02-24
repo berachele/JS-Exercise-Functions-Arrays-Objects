@@ -57,7 +57,7 @@ function makePersonObject(id, name, email) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(name) {
-  return "Hello, my name is " + this.name;
+  return "Hello, my name is " + name.name;
 }
 
 /**
