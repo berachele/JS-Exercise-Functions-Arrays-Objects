@@ -217,7 +217,7 @@ function sortCarInventory(inventory) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
 function getModelYears(inventory) {
-  console.log(Object.values(inventory)) ;
+  console.log(Object.values(inventory.car_year)) ;
 }
 
 /**
