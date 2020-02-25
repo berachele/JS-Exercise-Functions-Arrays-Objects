@@ -217,7 +217,11 @@ function sortCarInventory(inventory) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
 function getModelYears(inventory) {
-  console.log(Object.values(inventory.car_year)) ;
+  let yearArr = [];
+  for (let i=0; i<inventory.length;i++){
+    yearArr.push(inventory[i].car_year);
+  }
+  return yearArr;
 }
 
 /**
@@ -232,9 +236,16 @@ function getModelYears(inventory) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(inventory, oldCar) {
+  let oldArr = [];
+  for(let i=0; i<inventory.length;i++){
+    if(inventory[i].car_year<=oldCar){
+      oldArr.push(inventory[i])
+    }
+  }
+  return oldArr;
 }
+
 
 /**
  * ### Challenge `getGermanCars`
